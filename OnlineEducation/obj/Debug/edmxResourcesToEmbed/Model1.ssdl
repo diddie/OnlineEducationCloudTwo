@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OnlineStudyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Lecture">
+    <Key>
+      <PropertyRef Name="Lecture_ID" />
+    </Key>
+    <Property Name="Lecture_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="150" />
+    <Property Name="Type_ID" Type="int" />
+    <Property Name="Image_One" Type="varchar" MaxLength="150" />
+    <Property Name="Image_Two" Type="varchar" MaxLength="150" />
+    <Property Name="Image_Three" Type="varchar" MaxLength="150" />
+    <Property Name="Image_Four" Type="varchar" MaxLength="150" />
+    <Property Name="Image_Five" Type="varchar" MaxLength="150" />
+    <Property Name="Image_Six" Type="varchar" MaxLength="150" />
+    <Property Name="Description" Type="text" Nullable="false" />
+    <Property Name="Video" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="LectureType">
+    <Key>
+      <PropertyRef Name="Type_ID" />
+    </Key>
+    <Property Name="Type_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="REGISTRATION">
+    <Key>
+      <PropertyRef Name="ID_USER" />
+    </Key>
+    <Property Name="ID_USER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FNAME" Type="varchar" MaxLength="50" />
+    <Property Name="LNAME" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__Lecture__Type_ID__173876EA">
+    <End Role="LectureType" Type="Self.LectureType" Multiplicity="0..1" />
+    <End Role="Lecture" Type="Self.Lecture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LectureType">
+        <PropertyRef Name="Type_ID" />
+      </Principal>
+      <Dependent Role="Lecture">
+        <PropertyRef Name="Type_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OnlineStudyModelStoreContainer">
+    <EntitySet Name="Lecture" EntityType="Self.Lecture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LectureType" EntityType="Self.LectureType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="REGISTRATION" EntityType="Self.REGISTRATION" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Lecture__Type_ID__173876EA" Association="Self.FK__Lecture__Type_ID__173876EA">
+      <End Role="LectureType" EntitySet="LectureType" />
+      <End Role="Lecture" EntitySet="Lecture" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

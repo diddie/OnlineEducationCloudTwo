@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="OnlineEducation.admin.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../StyleSheets/MainStyle.css" rel="stylesheet" />
+    <script src="../jquery/jquery-2.1.4.min.js"></script>
+    <script src="../JavaScript/JavaScriptForMaster.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="form1" runat="server">
+    <div>
+        
+     
+          <header class="header">
+		<div class="top">
+		<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx"><asp:Image ID="Image1" runat="server"  CssClass="logo" ImageUrl="~/ImagesForMasterPage/logo-2.png"   /></asp:HyperLink>
+			
+                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="moto"  NavigateUrl="~/Home.aspx">ФОРМАЛНОТО ОБУЧЕНИЕ ЩЕ ТЕ ИЗХРАНВА <br /> САМООБУЧЕНИЕТО ЩЕ ТЕ НАПРАВИ УСПЕШЕН <br /> <span style="font-size:20px; float:right">- ДЖИМ РОН </span></asp:HyperLink> 
+		</div>
+
+		<div class="navigation">
+			<div class="menuToggle">
+              
+				<a href="#" onclick="pokaji()">&#9776;</a>
+			</div>
+
+			<div class="right-nav">
+				<ul>
+                    <li>
+                        <asp:HyperLink ID="hrlWelcome" runat="server" NavigateUrl="~/UserPanel.aspx"></asp:HyperLink></li>
+                  <li> <asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/admin/UploadPicture.aspx">Добавяне на снимки</asp:HyperLink></li>
+                    <li> <asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="~/admin/LectureTypeManagment.aspx">Добавяне на типове уроци</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/admin/LectureTypeTable.aspx">Таблица с типове уроци</asp:HyperLink></li>
+                    <li> <asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="~/admin/LectureManage.aspx">Добавяне на уроци </asp:HyperLink></li>
+                    <li>  <asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="~/admin/LectureTable.aspx">Таблици с уроци</asp:HyperLink></li>
+                    <li> <asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="~/admin/Users.aspx">Потребители</asp:HyperLink></li>
+					<li>
+                        <asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="~/Home.aspx">Начало</asp:HyperLink></li>
+					<li>
+                        <asp:HyperLink ID="HyperLink28" runat="server" NavigateUrl="~/LogIn.aspx">Вход</asp:HyperLink></li>
+
+                    <li> <asp:Button ID="btnLogOut" runat="server" Text="Изход" OnClick="btnLogOut_Click" CssClass="btlogOut" /></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<nav id="pole">
+		<div class="dropdown">
+			<button class="dropbtn">
+				Информационни технологии</button>
+			<div class="dropdown-content">
+                <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Pages/MsWord.aspx"><h4>MS Word</h4></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Pages/MsExcel.aspx"><h4>MS Excel</h4> </asp:HyperLink>
+				 <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Pages/MsAccess.aspx"><h4>MS Access</h4> </asp:HyperLink>
+				 <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Pages/MsPowerPoint.aspx"><h4>MS Power Point</h4> </asp:HyperLink>
+			</div>
+		</div>
+		<br />
+		<div class="dropdown">
+			<button class="dropbtn">
+				Графичен дизайн
+			</button>
+			<div class="dropdown-content">
+            <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Pages/AdobePhotoshop.aspx"><h4>Adobe Photoshop</h4></asp:HyperLink>
+		    <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/Pages/AdobeIllustrator.aspx">	<h4>Adobe Illustrator</h4></asp:HyperLink>
+			<asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/Pages/AdobeInDesign.aspx"><h4>Adobe InDesign</h4></asp:HyperLink>
+			<asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="~/Pages/CorelDraw.aspx"><h4>CorelDraw</h4></asp:HyperLink>
+			<asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/Pages/QuarkXpress.aspx"> <h4>QuarkXpress</h4></asp:HyperLink>
+			</div>
+		</div>
+		<br />
+
+		<div class="dropdown">
+			<button class="dropbtn">
+				Уеб програмиране
+			</button>
+			<div class="dropdown-content">
+                <asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="~/Pages/Html.aspx"><h4>HTML</h4></asp:HyperLink>
+				 <asp:HyperLink ID="HyperLink16" runat="server" NavigateUrl="~/Pages/Css.aspx"><h4>CSS</h4></asp:HyperLink>
+		         <asp:HyperLink ID="HyperLink17" runat="server" NavigateUrl="~/Pages/JavaScript.aspx"><h4>JavaScript</h4></asp:HyperLink>
+			</div>
+		</div>
+		<br />
+
+		<div class="dropdown">
+			<button class="dropbtn">
+				SQL
+			</button>
+			<div class="dropdown-content">
+                <asp:HyperLink ID="HyperLink18" runat="server" NavigateUrl="~/Pages/MsSql.aspx"><h4>MSSQL</h4></asp:HyperLink>
+			</div>
+		</div>
+		<br />
+
+		<div class="dropdown">
+			<button class="dropbtn">
+				C#
+			</button>
+			<div class="dropdown-content">
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/pages/CSharp.aspx"><h4>C# Console Application </h4></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Pages/CSharpWebForm.aspx"><h4>C# Web Forms</h4></asp:HyperLink>	
+                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Pages/CSharpWinForm.aspx">	<h4>C# Windows Forms</h4></asp:HyperLink>
+			</div>
+		</div>
+		<br />
+
+		<div class="dropdown">
+			<button class="dropbtn">
+				C++
+			</button>
+			<div class="dropdown-content">
+			      <asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="~/Pages/CPlusPlus.aspx"><h4>C++ Console Application</h4></asp:HyperLink>
+			</div>
+		</div>
+		<br />
+
+		<div class="dropdown">
+			<button class="dropbtn">
+				Java
+			</button>
+			<div class="dropdown-content">
+			      <asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Pages/Java.aspx"><h4>Java</h4> </asp:HyperLink>
+				      <asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Pages/JavaSwing.aspx"><h4>Java Swing</h4></asp:HyperLink>
+			</div>
+		</div>
+	</nav>
+        <div id="main">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  </div>
+	<footer id="footer">
+         <div>
+            <p id="contactUs" style="color:#FFF">Свържи се с нас</p>
+          
+                 <asp:ImageButton ID="ImageButton1" runat="server" CssClass="contactPic" ImageUrl="~/ImagesForMasterPage/contactus1.png" PostBackUrl="~/ContactUs.aspx" Width="80px" />
+        </div>
+        <div id="copyright">
+		<p>Copyright &copy; Noobies <%=DateTime.Now.Year%> <p>
+            </div>
+	</footer>
+    </div>
+    </form>
+</body>
+</html>

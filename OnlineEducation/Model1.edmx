@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OnlineStudyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Lecture">
+          <Key>
+            <PropertyRef Name="Lecture_ID" />
+          </Key>
+          <Property Name="Lecture_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Image" Type="varchar" MaxLength="150" />
+          <Property Name="Type_ID" Type="int" />
+          <Property Name="Image_One" Type="varchar" MaxLength="150" />
+          <Property Name="Image_Two" Type="varchar" MaxLength="150" />
+          <Property Name="Image_Three" Type="varchar" MaxLength="150" />
+          <Property Name="Image_Four" Type="varchar" MaxLength="150" />
+          <Property Name="Image_Five" Type="varchar" MaxLength="150" />
+          <Property Name="Image_Six" Type="varchar" MaxLength="150" />
+          <Property Name="Description" Type="text" Nullable="false" />
+          <Property Name="Video" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="LectureType">
+          <Key>
+            <PropertyRef Name="Type_ID" />
+          </Key>
+          <Property Name="Type_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="REGISTRATION">
+          <Key>
+            <PropertyRef Name="ID_USER" />
+          </Key>
+          <Property Name="ID_USER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FNAME" Type="varchar" MaxLength="50" />
+          <Property Name="LNAME" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__Lecture__Type_ID__173876EA">
+          <End Role="LectureType" Type="Self.LectureType" Multiplicity="0..1" />
+          <End Role="Lecture" Type="Self.Lecture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LectureType">
+              <PropertyRef Name="Type_ID" />
+            </Principal>
+            <Dependent Role="Lecture">
+              <PropertyRef Name="Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OnlineStudyModelStoreContainer">
+          <EntitySet Name="Lecture" EntityType="Self.Lecture" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LectureType" EntityType="Self.LectureType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGISTRATION" EntityType="Self.REGISTRATION" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Lecture__Type_ID__173876EA" Association="Self.FK__Lecture__Type_ID__173876EA">
+            <End Role="LectureType" EntitySet="LectureType" />
+            <End Role="Lecture" EntitySet="Lecture" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OnlineStudyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Lecture">
+          <Key>
+            <PropertyRef Name="Lecture_ID" />
+          </Key>
+          <Property Name="Lecture_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Type_ID" Type="Int32" />
+          <Property Name="Image_One" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Image_Two" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Image_Three" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Image_Four" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Image_Five" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Image_Six" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Video" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="LectureType" Relationship="Self.FK__Lecture__Type_ID__173876EA" FromRole="Lecture" ToRole="LectureType" />
+        </EntityType>
+        <EntityType Name="LectureType">
+          <Key>
+            <PropertyRef Name="Type_ID" />
+          </Key>
+          <Property Name="Type_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Lecture" Relationship="Self.FK__Lecture__Type_ID__173876EA" FromRole="LectureType" ToRole="Lecture" />
+        </EntityType>
+        <EntityType Name="REGISTRATION">
+          <Key>
+            <PropertyRef Name="ID_USER" />
+          </Key>
+          <Property Name="ID_USER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__Lecture__Type_ID__173876EA">
+          <End Role="LectureType" Type="Self.LectureType" Multiplicity="0..1" />
+          <End Role="Lecture" Type="Self.Lecture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LectureType">
+              <PropertyRef Name="Type_ID" />
+            </Principal>
+            <Dependent Role="Lecture">
+              <PropertyRef Name="Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OnlineStudyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Lecture" EntityType="Self.Lecture" />
+          <EntitySet Name="LectureType" EntityType="Self.LectureType" />
+          <EntitySet Name="REGISTRATION" EntityType="Self.REGISTRATION" />
+          <AssociationSet Name="FK__Lecture__Type_ID__173876EA" Association="Self.FK__Lecture__Type_ID__173876EA">
+            <End Role="LectureType" EntitySet="LectureType" />
+            <End Role="Lecture" EntitySet="Lecture" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OnlineStudyModelStoreContainer" CdmEntityContainer="OnlineStudyEntities">
+          <EntitySetMapping Name="Lecture">
+            <EntityTypeMapping TypeName="OnlineStudyModel.Lecture">
+              <MappingFragment StoreEntitySet="Lecture">
+                <ScalarProperty Name="Lecture_ID" ColumnName="Lecture_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Type_ID" ColumnName="Type_ID" />
+                <ScalarProperty Name="Image_One" ColumnName="Image_One" />
+                <ScalarProperty Name="Image_Two" ColumnName="Image_Two" />
+                <ScalarProperty Name="Image_Three" ColumnName="Image_Three" />
+                <ScalarProperty Name="Image_Four" ColumnName="Image_Four" />
+                <ScalarProperty Name="Image_Five" ColumnName="Image_Five" />
+                <ScalarProperty Name="Image_Six" ColumnName="Image_Six" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Video" ColumnName="Video" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LectureType">
+            <EntityTypeMapping TypeName="OnlineStudyModel.LectureType">
+              <MappingFragment StoreEntitySet="LectureType">
+                <ScalarProperty Name="Type_ID" ColumnName="Type_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGISTRATION">
+            <EntityTypeMapping TypeName="OnlineStudyModel.REGISTRATION">
+              <MappingFragment StoreEntitySet="REGISTRATION">
+                <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="FNAME" ColumnName="FNAME" />
+                <ScalarProperty Name="LNAME" ColumnName="LNAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,36 @@
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\bin\OnlineEducation.dll.config
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\bin\OnlineEducation.dll
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\bin\OnlineEducation.pdb
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\bin\EntityFramework.dll
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\bin\EntityFramework.SqlServer.dll
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\bin\Newtonsoft.Json.dll
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\bin\EntityFramework.xml
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\bin\EntityFramework.SqlServer.xml
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\obj\Debug\OnlineEducation.csprojResolveAssemblyReference.cache
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\obj\Debug\Interop.MediaPlayer.dll
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\obj\Debug\Interop.WMLSS.dll
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\obj\Debug\Interop.WMPDXMLib.dll
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\obj\Debug\Interop.WMPLauncher.dll
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\obj\Debug\Interop.WMPLib.dll
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\obj\Debug\Interop.WMPNSSCI.dll
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\obj\Debug\OnlineEducation.csproj.ResolveComReference.cache
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\obj\Debug\OnlineEducation.dll
+C:\Users\iliqn gorki\OnlineEducation\OnlineEducation\obj\Debug\OnlineEducation.pdb
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\bin\OnlineEducation.dll.config
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\bin\OnlineEducation.dll
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\bin\OnlineEducation.pdb
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\bin\EntityFramework.dll
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\bin\EntityFramework.SqlServer.dll
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\bin\Newtonsoft.Json.dll
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\bin\EntityFramework.xml
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\bin\EntityFramework.SqlServer.xml
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\obj\Debug\OnlineEducation.csprojResolveAssemblyReference.cache
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\obj\Debug\Interop.MediaPlayer.dll
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\obj\Debug\Interop.WMLSS.dll
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\obj\Debug\Interop.WMPDXMLib.dll
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\obj\Debug\Interop.WMPLauncher.dll
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\obj\Debug\Interop.WMPLib.dll
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\obj\Debug\Interop.WMPNSSCI.dll
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\obj\Debug\OnlineEducation.csproj.ResolveComReference.cache
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\obj\Debug\OnlineEducation.dll
+C:\Users\iliqn gorki\documents\visual studio 2013\Projects\OnlineEducation\OnlineEducation\obj\Debug\OnlineEducation.pdb

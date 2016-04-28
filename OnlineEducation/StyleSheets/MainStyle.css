@@ -1,0 +1,438 @@
+﻿
+
+
+
+* {
+	padding: 0;
+	margin: 0;
+
+}
+body {
+	font-family: Arial, sans-serif;
+}
+nav {
+	float: left;
+}
+a {
+	text-decoration: none
+}
+.container {
+	max-width: 960px;
+}
+
+/* header and top stuff */
+
+#header {
+	width: 100%;
+	margin: auto; 
+    padding:10px;
+	border-bottom: 2px solid #EEE;
+	display: block;
+}
+.top {
+	background-color: #304269;
+	display: inline-block;
+	width: 100%
+}
+.moto {
+	float: right;
+	padding: 30px;
+	color: #FFF;
+	font-size: 32px;
+	font-weight: 700;
+
+
+}
+.logo {
+	width: 170px;
+	padding-top:10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+.img {
+	width: 107px;
+	height: 100px;
+}
+#pole {
+	display: none;
+	height: 100%;
+	position: absolute;
+}
+.menuToggle {
+	float: left;
+}
+.menuToggle a{
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 28px;
+    display:block
+}
+
+.btnReg{
+background-color: #FFF;
+color: #6DA3B7;
+font-family: Arial, sans-serif;
+font-size:20px;
+font-weight:100;
+border-radius: 1em;
+text-align: center;
+}
+
+.btnReg:hover{
+background-color: #6DA3B7;
+color: #FFF;
+font-size:20px;
+font-family: Arial, sans-serif;
+width:100px;
+font-weight:100;
+cursor: pointer;
+}
+/* top navigation (right) */
+
+.navigation {
+    background-color: #6DA3B7;
+	overflow: auto;
+	padding: 10px;
+}
+.nav-mobile{
+    display:none
+}
+.right-nav {
+	float: right;
+}
+.right-nav ul li {
+	display: inline-block;
+	padding: 10px;
+}
+.btlogOut{
+    color: #FFF;
+    font-size: 20px;
+    padding: 10px;
+    background-color:#6DA3B7;
+    border: none;
+    border-radius: 5px;
+}
+.btlogOut:hover{
+    cursor: pointer;
+    background-color: #FFF;
+    color:#6DA3B7;
+}
+.right-nav ul li a {
+	color: #FFF;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px;
+}
+.right-nav ul li a:hover {
+	background-color: #fff;
+	color: #6DA3B7;
+}
+
+/* opening nav (left)*/
+
+.dropbtn {
+	background-color: #FFF;
+	color: #304269;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	width: 260px;
+	cursor: pointer;
+	border-bottom: 1px solid #91BED4;
+	font-size: 24px;
+	font-weight: 700;
+    display:block;
+    box-sizing: border-box;
+    text-align:center;
+}
+.dropdown {
+	position: relative;
+	display: inline-block;
+color: #D9E8F5;
+	/*height: auto;*/
+}
+.dropdown-content {
+	display: none;
+	/* background-color: #29ABE2;
+	/* cvqt na  menutata koito izlizat ot buttona*/
+	/* min-width: 160px;*/
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	left: 260px;
+	top: 0;
+	background-color: #fff;
+	width: 200px;
+
+}
+.dropdown-content a h4 {
+	color: #304269;
+	background-color: #fafafa;
+	/* cvqt na  teksta na menutata koito izlizat ot opreden buton*/
+	padding: 12px 16px;
+}
+.dropdown-content a h4:hover {
+    color: #3D96B2;
+}
+.dropdown:hover .dropdown-content {
+	display: inline-block;
+}
+.dropdown:hover .dropbtn {
+	color: #3D96B2;
+}
+
+/* content  */
+
+#main {
+     flex-flow:column;
+    padding: 20px;
+    margin-left: 0;
+
+}
+
+
+/*.lecture .text{
+    padding: 30px 100px;
+    float:right
+    
+}
+  */
+    
+
+.contactPic{
+    width: 80px;
+    height: 80px;
+}
+#contactUs{
+    color: #404040;
+    font-weight: 100;
+    font-size: 20px;
+    overflow: auto;
+	padding: 10px;
+}
+#copyright{
+    background-color: #304269;
+    color: #FFF;
+    margin-top:15px;
+}
+#copyright p {
+    padding: 10px 0;
+}
+#footer {
+	background-color: #3D96B2;
+	color:  #FFF;
+	clear: both;
+	text-align: center;
+    color: white;
+	clear: both;
+	text-align: center;
+	padding: 15px 0 0 0;
+    width:100%;
+}
+.regBtn{
+background-color: #FFF;
+color: #6DA3B7;
+font-family: Arial, sans-serif;
+font-size:20px;
+width:100px;
+font-weight:100;
+border-radius: 1em;
+text-align: center;
+}
+.regBtn:hover{
+background-color: #6DA3B7;
+color: #FFF;
+font-size:20px;
+font-family: Arial, sans-serif;
+width:100px;
+font-weight:100;
+cursor: pointer;
+}
+
+.registration{
+text-align:center;
+color: #304269;
+font-weight:700;
+font-size:35px;
+padding:30px;
+
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* registration things */
+.regContainer {
+    width:100%;
+    height:auto;
+    border-radius:20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.regTable {
+    table-layout: fixed;
+    margin: 0 auto;
+    border-collapse: collapse;
+
+}
+
+
+.regTable td, .regTable tr {
+   
+    padding: 15px;
+    min-width: 200px;
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media (max-width: 700px){
+
+    .top {
+        text-align:center;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .right-nav {
+        display:none;
+    }
+
+    .modal-content, .dropbtn, .dropdown, .dropdown-content, #pole
+    {
+        width:100%;
+        text-align:center;
+    }
+
+    .dropdown:hover .dropdown-content {
+	position:initial;
+            display:block
+    }
+
+    #pole {
+        position:static;
+        margin-bottom: 30px;
+    }
+
+    .regContainer {
+        width: 100%;
+    }
+
+    .regTable {
+        border-collapse: collapse;
+        border-spacing: 0;
+        overflow-x:auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .regTable td, .regTable tr {
+        border: 0;
+        display: block;
+        
+    }
+    .regTable td{
+        padding: 2px 0;
+    }
+
+    .regTable tr {
+        padding: 0;
+    }
+
+     .loginTable td {
+        padding: 5px;
+    }
+     .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+}

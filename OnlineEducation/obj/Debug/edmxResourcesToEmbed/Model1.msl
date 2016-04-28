@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OnlineStudyModelStoreContainer" CdmEntityContainer="OnlineStudyEntities">
+    <EntitySetMapping Name="Lecture">
+      <EntityTypeMapping TypeName="OnlineStudyModel.Lecture">
+        <MappingFragment StoreEntitySet="Lecture">
+          <ScalarProperty Name="Lecture_ID" ColumnName="Lecture_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Type_ID" ColumnName="Type_ID" />
+          <ScalarProperty Name="Image_One" ColumnName="Image_One" />
+          <ScalarProperty Name="Image_Two" ColumnName="Image_Two" />
+          <ScalarProperty Name="Image_Three" ColumnName="Image_Three" />
+          <ScalarProperty Name="Image_Four" ColumnName="Image_Four" />
+          <ScalarProperty Name="Image_Five" ColumnName="Image_Five" />
+          <ScalarProperty Name="Image_Six" ColumnName="Image_Six" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LectureType">
+      <EntityTypeMapping TypeName="OnlineStudyModel.LectureType">
+        <MappingFragment StoreEntitySet="LectureType">
+          <ScalarProperty Name="Type_ID" ColumnName="Type_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGISTRATION">
+      <EntityTypeMapping TypeName="OnlineStudyModel.REGISTRATION">
+        <MappingFragment StoreEntitySet="REGISTRATION">
+          <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="FNAME" ColumnName="FNAME" />
+          <ScalarProperty Name="LNAME" ColumnName="LNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
